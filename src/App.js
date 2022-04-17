@@ -1,7 +1,6 @@
 import { render } from 'react-dom';
 import React, { useState, StrictMode } from 'react';
 import Dropdown from './Dropdown';
-import DropdownClass from './DropdownClass';
 
 // npm install -D @types/react@17.0.39 @types/react-dom@17.0.11
 // npx tsc --init
@@ -39,10 +38,10 @@ const App = () => {
           setChecked(!checked);
         }}
       />
-      {checked ? <DropdownClass options={dropdownOptions} 
-                                onChange={setDropdownOption} 
-                                noneValue='No Fruit' 
-                                placeholderText='Please choose one'/> : null}
+      {checked ? <Dropdown options={dropdownOptions} 
+                           onChange={setDropdownOption} 
+                           noneValue='No Fruit' 
+                           placeholderText='Please choose one'/> : null}
     </>
   );
 };
